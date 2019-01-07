@@ -3,6 +3,7 @@ package pl.benchmarksproject.main.main;
 import pl.benchmarksproject.main.files.FileManager;
 import pl.benchmarksproject.main.filters.FilterEnum;
 import pl.benchmarksproject.main.filters.Filters;
+import pl.benchmarksproject.main.filters.Scaler;
 
 import java.awt.image.BufferedImage;
 
@@ -60,8 +61,8 @@ public class Main {
         else if (filterEnum.equals(FilterEnum.MEAN)) {
             result = Filters.MeanFilter(image);
         }
-
-        fileManager.saveImage(result);
+        Scaler scaler = new Scaler(result);
+        fileManager.saveImage(scaler.getScaledByOld(2));
 
 
     }
