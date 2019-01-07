@@ -6,43 +6,13 @@ import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Mode;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Filters {
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void greyscaleBenchmark(){
-        String[] args = {"obrazek.png","greyscale"};
-        Main.main(args);
-    }
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void negativeBenchmark(){
-        String[] args = {"obrazek.png","negative"};
-        Main.main(args);
-    }
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void antiAliasingFilter(){
-        String[] args = {"obrazek.png","antialiasing"};
-        Main.main(args);
-    }
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void meanFilterBenchmark(){
-        String[] args = {"obrazek.png","mean"};
-        Main.main(args);
-    }
-
 
     /**
      * Filtr przekształca kolorowy obraz na obraz w skali szarości, poprzez policzenie średniej wartości każdego piksela.
