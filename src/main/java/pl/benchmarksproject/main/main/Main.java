@@ -40,6 +40,14 @@ public class Main {
                 filterEnum = FilterEnum.MEAN;
                 break;
             }
+            case "scalebynew": {
+                filterEnum = FilterEnum.SCALEBYNEW;
+                break;
+            }
+            case "scalebyold": {
+                filterEnum = FilterEnum.SCALEBYOLD;
+                break;
+            }
             default: {
                 System.out.println("Unknown filter");
                 exit(2);
@@ -51,18 +59,20 @@ public class Main {
 
         if (filterEnum.equals(FilterEnum.GREYSCALE)) {
             result = Filters.GreyScaleFilter(image);
-        }
-        else if (filterEnum.equals((FilterEnum.NEGATIVE))){
+        } else if (filterEnum.equals((FilterEnum.NEGATIVE))){
             result = Filters.NegativeFilter(image);
-        }
-        else if (filterEnum.equals(FilterEnum.ANTIALIASING)) {
+        } else if (filterEnum.equals(FilterEnum.ANTIALIASING)) {
             result = Filters.AntiAliasingFilter(image);
-        }
-        else if (filterEnum.equals(FilterEnum.MEAN)) {
+        } else if (filterEnum.equals(FilterEnum.MEAN)) {
             result = Filters.MeanFilter(image);
+        } else if (filterEnum.equals(FilterEnum.SCALEBYNEW)) {
+            Scaler scaler = new Scaler(image);
+            result = scaler.getScaledByNew(2);
+        } else if (filterEnum.equals(FilterEnum.SCALEBYOLD)) {
+            Scaler scaler = new Scaler(image);
+            result = scaler.getScaledByOld(2);
         }
-        Scaler scaler = new Scaler(result);
-        fileManager.saveImage(scaler.getScaledByOld(2));
+        fileManager.saveImage(result);
 
 
     }

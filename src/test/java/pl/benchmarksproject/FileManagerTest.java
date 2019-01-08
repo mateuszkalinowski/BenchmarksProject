@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class FileManagerTest {
 
-    private String dirPath = "src/test/resources/";
+    private String dirPath = "src/test/java/resources/";
     private String fileName1 = "test_image_1.png";
 
     @Test

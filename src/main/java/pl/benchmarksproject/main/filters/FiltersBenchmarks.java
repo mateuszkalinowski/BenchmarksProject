@@ -11,40 +11,40 @@ import java.io.File;
 import java.io.IOException;
 
 public class FiltersBenchmarks {
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void greyscaleBenchmark() throws IOException {
-        File file = new File("src/main/resources/obrazek.png");
-        BufferedImage bufferedImage = ImageIO.read(file);
-        BufferedImage result = Filters.GreyScaleFilter(bufferedImage);
-    }
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void negativeFullBenchmark() throws IOException{
-        File file = new File("src/main/resources/obrazek.png");
-        BufferedImage bufferedImage = ImageIO.read(file);
-        BufferedImage result = Filters.NegativeFilter(bufferedImage);
-    }
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void antiAliasingFullFilter() throws IOException{
-        File file = new File("src/main/resources/obrazek.png");
-        BufferedImage bufferedImage = ImageIO.read(file);
-        BufferedImage result = Filters.AntiAliasingFilter(bufferedImage);
-    }
-
-    @Benchmark
-    @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.AverageTime)
-    public void meanFilterFullBenchmark() throws IOException{
-        File file = new File("src/main/resources/obrazek.png");
-        BufferedImage bufferedImage = ImageIO.read(file);
-        BufferedImage result = Filters.MeanFilter(bufferedImage);
-    }
+//
+//    @Benchmark
+//    @Fork(value = 1, warmups = 1)
+//    @BenchmarkMode(Mode.AverageTime)
+//    public void greyscaleBenchmark() throws IOException {
+//        File file = new File("src/main/resources/obrazek.png");
+//        BufferedImage bufferedImage = ImageIO.read(file);
+//        BufferedImage result = Filters.GreyScaleFilter(bufferedImage);
+//    }
+//    @Benchmark
+//    @Fork(value = 1, warmups = 1)
+//    @BenchmarkMode(Mode.AverageTime)
+//    public void negativeBenchmark() throws IOException{
+//        File file = new File("src/main/resources/obrazek.png");
+//        BufferedImage bufferedImage = ImageIO.read(file);
+//        BufferedImage result = Filters.NegativeFilter(bufferedImage);
+//    }
+//
+//    @Benchmark
+//    @Fork(value = 1, warmups = 1)
+//    @BenchmarkMode(Mode.AverageTime)
+//    public void antiAliasingFullFilter() throws IOException{
+//        File file = new File("src/main/resources/obrazek.png");
+//        BufferedImage bufferedImage = ImageIO.read(file);
+//        BufferedImage result = Filters.AntiAliasingFilter(bufferedImage);
+//    }
+//
+//    @Benchmark
+//    @Fork(value = 1, warmups = 1)
+//    @BenchmarkMode(Mode.AverageTime)
+//    public void meanFilterFullBenchmark() throws IOException{
+//        File file = new File("src/main/resources/obrazek.png");
+//        BufferedImage bufferedImage = ImageIO.read(file);
+//        BufferedImage result = Filters.MeanFilter(bufferedImage);
+//    }
 
 }

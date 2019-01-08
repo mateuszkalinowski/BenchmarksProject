@@ -14,7 +14,7 @@ public class FiltersTest {
 
     @Test
     public void greyScaleSizeTest() throws Exception {
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.GreyScaleFilter(bufferedImage);
         assertEquals(bufferedImage.getHeight(), result.getHeight());
@@ -23,7 +23,7 @@ public class FiltersTest {
 
     @Test
     public void negativeFilterSizeTest() throws Exception {
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.NegativeFilter(bufferedImage);
         assertEquals(bufferedImage.getHeight(), result.getHeight());
@@ -32,7 +32,7 @@ public class FiltersTest {
 
     @Test
     public void antiAliasingFilterSizeTest() throws Exception {
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.AntiAliasingFilter(bufferedImage);
         assertEquals(bufferedImage.getHeight(), result.getHeight());
@@ -41,7 +41,7 @@ public class FiltersTest {
 
     @Test
     public void meanFilterSizeTest() throws Exception {
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.MeanFilter(bufferedImage);
         assertEquals(bufferedImage.getHeight(), result.getHeight());
@@ -51,7 +51,7 @@ public class FiltersTest {
 
     @Test
     public void greyScaleFilter() throws Exception{
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.GreyScaleFilter(bufferedImage);
         for(int i = 0; i < result.getWidth();i++) {
@@ -65,7 +65,7 @@ public class FiltersTest {
 
     @Test
     public void NegativeFilter() throws Exception{
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage bufferedImage = ImageIO.read(file);
         BufferedImage result = Filters.NegativeFilter(bufferedImage);
         for(int i = 0; i < result.getWidth();i++) {
@@ -92,7 +92,7 @@ public class FiltersTest {
 
     @Test
     public void AntiAliasingFilterTest() throws Exception{
-        File file = new File("src/test/resources/test_image_2.png");
+        File file = new File("src/test/java/resources/test_image_2.png");
         BufferedImage original = ImageIO.read(file);
         BufferedImage result = Filters.AntiAliasingFilter(original);
         for(int i = 1; i < result.getWidth() - 1;i++) {
@@ -114,7 +114,7 @@ public class FiltersTest {
 
     @Test
     public void meanFilter() throws Exception{
-        File file = new File("src/test/resources/obrazek.png");
+        File file = new File("src/test/java/resources/obrazek.png");
         BufferedImage original = ImageIO.read(file);
         BufferedImage result = Filters.MeanFilter(original);
         for(int i = 0; i < result.getWidth()-9;i+=9) {

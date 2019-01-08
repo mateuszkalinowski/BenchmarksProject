@@ -4,5 +4,7 @@ public enum FilterEnum {
     GREYSCALE,
     NEGATIVE,
     ANTIALIASING,
-    MEAN
+    MEAN,
+    SCALEBYOLD,
+    SCALEBYNEW
 }
